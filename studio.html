@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow"><title>Circuit Studio · Workspace</title>
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml"><link rel="stylesheet" href="assets/site.css">
+  <script src="site-config.js" defer></script><script src="assets/access.js" defer></script><script src="assets/studies.js" defer></script><script src="assets/studio.js" defer></script>
+</head>
+<body class="studio-page">
+  <div id="studio-shell" hidden>
+    <header class="studio-header"><a href="index.html#studies" class="back-link">← Studies</a><span id="workspace-title">Circuit Studio</span><div><button id="toggle-steps" class="small-button" aria-controls="study-panel" aria-expanded="true" hidden>Hide study steps</button><button id="workspace-lock" class="text-button">Lock site</button></div></header>
+    <main class="workspace-layout" id="workspace-layout">
+      <aside id="study-panel" class="study-panel" hidden aria-labelledby="study-title"></aside>
+      <section class="frame-area" aria-label="Circuit Studio workspace">
+        <div class="loading-panel" id="loading" role="status"><span class="status-dot"></span><p>Opening Circuit Studio…</p><small>The first load includes the simulator and learning tools.</small></div>
+        <div id="launch-error" class="launch-error" hidden role="alert"></div>
+        <iframe id="studio-frame" title="Interactive Circuit Studio" allow="microphone; fullscreen; clipboard-write" allowfullscreen></iframe>
+      </section>
+    </main>
+  </div>
+  <noscript><p class="launch-error">Enable JavaScript to open Circuit Studio. <a href="index.html">Return to the home page</a>.</p></noscript>
+</body>
+</html>

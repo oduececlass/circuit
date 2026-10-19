@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Circuit Studio: guided circuit studies, interactive simulation, breadboard learning, and a quick student guide.">
+  <meta name="theme-color" content="#0a776c">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Circuit Studio · Study & Explore</title>
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/site.css">
+  <script src="site-config.js" defer></script>
+  <script src="assets/access.js" defer></script>
+  <script src="assets/studies.js" defer></script>
+  <script src="assets/home.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <section id="access-screen" class="access-screen" aria-labelledby="access-title">
+    <div class="access-card">
+      <a class="brand" href="index.html"><img src="assets/mark.svg" alt="" width="36" height="36">Circuit Studio</a>
+      <p class="eyebrow">ECE 314 · Electronic circuits</p>
+      <h1 id="access-title">Your circuit lab.<br><span>A place to explore.</span></h1>
+      <p class="muted">Open Circuit Studio, try a guided study, or watch the quick-start video.</p>
+      <form id="access-form">
+        <label for="password">Class password</label>
+        <div class="password-field"><input id="password" name="password" type="password" autocomplete="current-password" required aria-describedby="access-error" autofocus><button id="reveal-password" type="button" aria-label="Show password" aria-pressed="false">Show</button></div>
+        <p id="access-error" class="form-error" role="alert"></p>
+        <button id="access-submit" class="button primary" type="submit">Enter Circuit Studio <span aria-hidden="true">→</span></button>
+      </form>
+      <p class="fine">Use the password provided by your instructor. Access stays open in this tab until you lock it or close the tab.</p>
+      <noscript><p class="form-error">Enable JavaScript to enter the site and run Circuit Studio.</p></noscript>
+    </div>
+    <p class="access-footer">Predict. Investigate. Explain.</p>
+  </section>
+
+  <div id="site" hidden>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html"><img src="assets/mark.svg" alt="" width="34" height="34">Circuit Studio</a>
+        <nav aria-label="Main navigation"><a href="#studies">Studies</a><a href="#guide">Guide</a><button class="text-button" data-lock>Lock site <span aria-hidden="true">↗</span></button></nav>
+      </div>
+    </header>
+    <main id="main" tabindex="-1">
+      <section class="hero container" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="status-dot"></span> ECE 314 · Interactive circuit learning</p>
+          <h1 id="hero-title">Understand the<br><span>circuit.</span><br>Make it work.</h1>
+          <p class="hero-description">Move from a prediction to a working explanation. Explore the schematic, see what changes, and test your ideas in Circuit Studio.</p>
+          <div class="actions"><a class="button primary" href="studio.html">Open Circuit Studio <span aria-hidden="true">↗</span></a><a class="button secondary" href="#guide">Watch the guide <span class="duration">1:43</span></a></div>
+          <p class="hero-note">Runs in your browser · Start with an example or your own circuit</p>
+        </div>
+        <div class="hero-figure">
+          <div class="figure-heading"><span class="eyebrow">Start with a question</span><span class="figure-tag">Op amp</span></div>
+          <h2>Why does the output invert?</h2>
+          <img class="schematic" src="assets/inverting.svg" width="920" height="620" alt="Inverting op-amp circuit with a 0.5 volt input, a 10 kiloohm input resistor, a 40 kiloohm feedback resistor, and a grounded noninverting input.">
+          <div class="figure-answer"><div><span class="eyebrow">Predict the output</span><math aria-label="Output voltage equals negative feedback resistance divided by input resistance times input voltage"><msub><mi>v</mi><mi>o</mi></msub><mo>=</mo><mo>−</mo><mfrac><msub><mi>R</mi><mi>f</mi></msub><msub><mi>R</mi><mn>1</mn></msub></mfrac><msub><mi>v</mi><mi>i</mi></msub></math></div><a href="studio.html?study=follow-current" aria-label="Explore the inverting amplifier study">Explore it <span aria-hidden="true">→</span></a></div>
+        </div>
+      </section>
+
+      <section id="studies" class="studies-section" aria-labelledby="studies-title">
+        <div class="container">
+          <div class="section-heading"><div><p class="eyebrow">Six ways to get started</p><h2 id="studies-title">Pick a circuit. Try one idea.</h2></div><p>Short studies pair a circuit with the tools that help explain it.</p></div>
+          <div class="study-grid" id="study-grid"></div>
+          <div class="study-method"><strong>A useful rhythm</strong><span><b>01</b> Predict first</span><span><b>02</b> Change one thing</span><span><b>03</b> Explain the result</span></div>
+        </div>
+      </section>
+
+      <section id="guide" class="guide-section container" aria-labelledby="guide-title">
+        <div class="guide-copy"><p class="eyebrow">A quick orientation</p><h2 id="guide-title">Start here.<br>Then explore.</h2><p>Watch the original narrated Circuit Studio student guide before your first study.</p><ul class="guide-points"><li>Choose and inspect a circuit</li><li>Predict, solve, and explain</li><li>Save an editable project</li></ul><a id="written-guide" class="inline-link" href="guides/Circuit_Studio_Student_Study_Guide.docx" download>Download the student study guide <span aria-hidden="true">↓</span></a><p class="fine">The video shows an earlier interface. The studies above use the current version included with this site.</p></div>
+        <div class="video-wrap"><video id="guide-video" controls playsinline preload="none" poster="assets/guide-poster.jpg" aria-label="Circuit Studio Quick Guide, one minute and forty-three seconds"></video><div class="video-caption"><span>Circuit Studio Quick Guide</span><span>1:43 · Narrated</span></div><p id="video-error" class="form-error" hidden>The video could not be loaded. <a href="videos/Circuit_Studio_Quick_Guide.mp4">Open the video directly</a>.</p></div>
+      </section>
+
+      <section class="start-strip container"><div><p class="eyebrow">Your next step</p><h2>Make one prediction. Test it.</h2></div><a class="button primary" href="studio.html">Launch Circuit Studio <span aria-hidden="true">↗</span></a></section>
+    </main>
+    <footer class="site-footer container"><span>Circuit Studio · Study & Explore</span><div><a href="#main">Back to top ↑</a><button class="text-button" data-lock>Lock site</button></div></footer>
+  </div>
+</body>
+</html>
